@@ -1,12 +1,13 @@
 import CartItem from "./CartItem";
 
-function Cart({ cartItems, allItems, dispatch }) {
+function Cart({ cartItems, allItems, dispatch, totalCost }) {
   return (
     <div className="cart contaier">
       <div className="category-title">
         <h2>Корзина</h2>
       </div>
-      <div className="cart-container">
+
+      <div className="cart-container container">
         <div className="cartItems container">
           {allItems.map((product) => {
             if (cartItems[product.id] !== 0) {
@@ -20,6 +21,15 @@ function Cart({ cartItems, allItems, dispatch }) {
               );
             }
           })}
+        </div>
+        <div className="shoppingCart-info">
+          <div className="total-price">
+            <span>ИТОГО</span>
+            <span>₽ {totalCost}</span>
+          </div>
+          <div className="purchase-container">
+            <p>Перейти к оформлению</p>
+          </div>
         </div>
       </div>
     </div>

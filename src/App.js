@@ -8,6 +8,7 @@ import { Route, Routes, useActionData } from "react-router-dom";
 import { useReducer } from "react";
 
 import data from "./data/data";
+import { act } from "react-dom/test-utils";
 
 function getDefaultCart() {
   let cart = {};
@@ -27,7 +28,7 @@ const initialState = {
   amountOfGoods: 0,
   totalCost: 0,
   cartItems: getDefaultCart(),
-  language: "rus",
+  language: "Рус",
 };
 
 function reducer(state, action) {
@@ -57,6 +58,28 @@ function reducer(state, action) {
       };
     }
 
+    case "deleteItemCompletely": {
+      const deleteItem = (prevItems, itemId) => {
+        return { ...prevItems, [itemId]: 0 };
+      };
+
+      return {
+        ...state,
+        amountOfGoods: state.amountOfGoods - state.cartItems[action.payload.id],
+        totalCost:
+          state.totalCost -
+          state.cartItems[action.payload.id] * action.payload.price,
+        cartItems: deleteItem(state.cartItems, action.payload.id),
+      };
+    }
+
+    case "changeLanguage": {
+      return {
+        ...state,
+        language: action.payload,
+      };
+    }
+
     default: {
       throw new Error("Unkown");
     }
@@ -64,10 +87,8 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [{ amountOfGoods, cartItems }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [{ amountOfGoods, totalCost, cartItems, language }, dispatch] =
+    useReducer(reducer, initialState);
 
   return (
     <div className="app">
@@ -82,12 +103,13 @@ function App() {
               cartItems={cartItems}
               allItems={allItems}
               dispatch={dispatch}
+              totalCost={totalCost}
             />
           }
         />
       </Routes>
 
-      <Footer />
+      <Footer language={language} dispatch={dispatch} />
     </div>
   );
 }

@@ -41,7 +41,16 @@ function CartItem(props) {
           <p className="price-cart-gray">{price} ₽</p>
         </div>
         <div className="btns-right-container">
-          <img src={Delete} className="delete-cart-icon" />
+          <img
+            src={Delete}
+            className="delete-cart-icon"
+            onClick={() =>
+              dispatch({
+                type: "deleteItemCompletely",
+                payload: { price: +price, id: id },
+              })
+            }
+          />
           <p className="price-cart-black">{price} ₽</p>
         </div>
       </div>

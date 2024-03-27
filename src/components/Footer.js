@@ -1,9 +1,26 @@
 import Lang from "../icons/lang.svg";
+import { Link } from "react-router-dom";
 
 import VK from "../icons/VK.svg";
 import Telegram from "../icons/Telegram.svg";
 import Whatsapp from "../icons/Whatsapp.svg";
-function Footer() {
+
+const languages = [
+  {
+    id: 1,
+    lang: "Каз",
+  },
+  {
+    id: 2,
+    lang: "Рус",
+  },
+  {
+    id: 3,
+    lang: "Eng",
+  },
+];
+
+function Footer({ language, dispatch }) {
   return (
     <div className="footer">
       <div className="logo-footer">
@@ -13,7 +30,9 @@ function Footer() {
         <div>
           <ul className="list">
             <li>Избранное</li>
-            <li>Корзина</li>
+            <Link to="/cart" className="links">
+              <li>Корзина</li>
+            </Link>
             <li>Контакты</li>
           </ul>
         </div>
@@ -21,8 +40,19 @@ function Footer() {
           Условия сервиса
           <div className="language">
             <img src={Lang} />
-            <button className="btn btn-lang active-lang">Рус</button>
-            <button className="btn btn-lang ">Eng</button>
+
+            {languages.map((lang) => (
+              <button
+                className={`btn btn-lang ${
+                  language === lang.lang ? "active-lang" : ""
+                }`}
+                onClick={() =>
+                  dispatch({ type: "changeLanguage", payload: lang.lang })
+                }
+              >
+                {lang.lang}
+              </button>
+            ))}
           </div>
         </div>
       </div>

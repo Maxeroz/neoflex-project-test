@@ -118,7 +118,8 @@ h1 {
 }
 
 .cart-container {
-  /* min-height: 400px; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .wirelessHeadphones-container {
@@ -242,6 +243,11 @@ h1 {
 
 .btn-lang {
   font-size: 15px;
+  transition: 0.1s ease-in;
+}
+
+.btn-lang:hover {
+  transform: scale(1.1);
 }
 
 .networks {
@@ -363,10 +369,54 @@ h1 {
 .delete-cart-icon {
   width: 20px;
   height: 20px;
+  transition: 0.1s ease-in;
+}
+
+.delete-cart-icon:hover {
+  transform: scale(1.1);
 }
 
 .price-cart-black {
   font-size: 15px;
   color: var(--shadow-color);
   font-weight: 600;
+}
+
+.shoppingCart-info {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 120px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-price {
+  font-size: 15px;
+  font-weight: 600;
+  width: 311px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.purchase-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  width: 348px;
+  background-color: var(--shadow-color);
+  height: 65px;
+  border-radius: 20px;
+  transition: 0.1s ease-in;
+}
+
+.purchase-container:hover {
+  transform: scale(1.02);
 }

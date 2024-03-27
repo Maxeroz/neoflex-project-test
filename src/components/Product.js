@@ -28,9 +28,7 @@ function Product(props) {
               })
             }
           >
-            <Link to="/cart" className="links">
-              Купить
-            </Link>
+            Купить
           </button>
         </div>
       </div>

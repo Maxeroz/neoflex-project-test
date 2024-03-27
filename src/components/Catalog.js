@@ -12,6 +12,14 @@ function Catalog({ dispatch }) {
           <Product key={product.id} data={product} dispatch={dispatch} />
         ))}
       </div>
+      <div className="category-title">
+        <h2>Беспроводные наушники</h2>
+      </div>
+      <div className="products container wirelessHeadphones-container">
+        {data.wirelessHeadphones.map((product) => (
+          <Product key={product.id} data={product} dispatch={dispatch} />
+        ))}
+      </div>
     </div>
   );
 }

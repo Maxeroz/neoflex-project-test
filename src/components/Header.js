@@ -11,7 +11,7 @@ function Header({ amountOfGoods }) {
       <h1>QPICK</h1>
       <div className="links">
         <Link to="/">
-          <Icon imageUrl={Heart_Icon} styling="cart_icon" amount="2" />
+          <Icon imageUrl={Heart_Icon} styling="cart_icon" amount="0" />
         </Link>
         <Link to="/cart">
           <Icon

@@ -7,7 +7,8 @@
   --white: #ffffff;
   --title-color: #838383;
   --shadow-color: #000000;
-  --price-color: #ffa542;
+  --hint-color: #ffa542;
+  --border-radius: 30px;
 }
 
 * {
@@ -109,10 +110,14 @@ h1 {
   height: 886px;
 }
 
+.wirelessHeadphones-container {
+  height: 455px;
+}
+
 .product {
   font-size: 17px;
   background-color: var(--white);
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -130,7 +135,7 @@ h1 {
 }
 
 .price-color {
-  color: var(--price-color);
+  color: var(--hint-color);
 }
 
 .description {
@@ -152,15 +157,91 @@ h1 {
   color: var(--title-color);
 }
 
-.btn-purchase {
-  font-size: 17px;
+.btn {
   border: none;
   background-color: unset;
   cursor: pointer;
+}
+
+.btn-purchase {
+  font-size: 17px;
   transition: 0.1s ease-in;
 }
 
 .btn-purchase:hover {
   color: var(--title-color);
+  transform: scale(1.1);
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--white);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  height: 149px;
+  justify-content: space-between;
+  padding: 29px 29px 29px 29px;
+}
+
+.logo-footer {
+  width: 85px;
+  height: 80px;
+}
+
+.pages {
+  display: flex;
+  width: 427px;
+  justify-content: space-between;
+}
+
+.list {
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.1s ease-in;
+}
+
+.list li:hover {
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.lang-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 155px;
+}
+
+.language {
+  display: flex;
+  gap: 17px;
+}
+
+.active-lang {
+  font-weight: bold;
+  color: var(--hint-color);
+}
+
+.btn-lang {
+  font-size: 15px;
+}
+
+.networks {
+  display: flex;
+  width: 126px;
+  justify-content: space-between;
+}
+
+.network-icon {
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.network-icon:hover {
   transform: scale(1.1);
 }

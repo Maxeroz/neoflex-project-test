@@ -11,7 +11,11 @@ import data from "./data/data";
 
 function getDefaultCart() {
   let cart = {};
-  for (let i = 1; i < data.headphones.length + 1; i++) {
+  for (
+    let i = 1;
+    i < [...data.headphones, ...data.wirelessHeadphones].length + 1;
+    i++
+  ) {
     cart[i] = 0;
   }
   return cart;
@@ -23,6 +27,7 @@ const initialState = {
   amountOfGoods: 0,
   totalCost: 0,
   cartItems: getDefaultCart(),
+  language: "rus",
 };
 
 function reducer(state, action) {

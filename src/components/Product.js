@@ -18,7 +18,7 @@ function Product(props) {
         <div className="description-container">
           <p className="price-color">{price} ₽</p>
           <button
-            className="btn-purchase"
+            className="btn btn-purchase"
             onClick={() =>
               dispatch({
                 type: "purchase",

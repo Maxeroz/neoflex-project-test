@@ -32,8 +32,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 30px;
+  min-height: 100vh;
 }
 
 .links {
@@ -117,7 +118,7 @@ h1 {
 }
 
 .cart-container {
-  min-height: 400px;
+  /* min-height: 400px; */
 }
 
 .wirelessHeadphones-container {
@@ -192,6 +193,8 @@ h1 {
   height: 149px;
   justify-content: space-between;
   padding: 29px 29px 29px 29px;
+  margin-top: auto;
+  width: 1135px;
 }
 
 .logo-footer {
@@ -316,6 +319,12 @@ h1 {
   width: 30px;
   height: 30px;
   border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.btn-round:hover {
+  transform: scale(1.1);
 }
 
 .amount-items-cart {

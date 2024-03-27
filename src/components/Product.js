@@ -23,7 +23,7 @@ function Product(props) {
             className="btn btn-purchase"
             onClick={() =>
               dispatch({
-                type: "purchase",
+                type: "addToCart",
                 payload: { price: +price, id: id },
               })
             }

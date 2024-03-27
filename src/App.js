@@ -32,7 +32,7 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case "purchase": {
+    case "addToCart": {
       const add = (prevItems, itemId) => {
         return { ...prevItems, [itemId]: prevItems[itemId] + 1 };
       };
@@ -51,7 +51,8 @@ function reducer(state, action) {
 
       return {
         ...state,
-        totalCost: state.totalCost + action.payload.price,
+        amountOfGoods: state.amountOfGoods - 1,
+        totalCost: state.totalCost - action.payload.price,
         cartItems: remove(state.cartItems, action.payload.id),
       };
     }
@@ -76,7 +77,13 @@ function App() {
         <Route index element={<Catalog dispatch={dispatch} />} />
         <Route
           path="/cart"
-          element={<Cart cartItems={cartItems} allItems={allItems} />}
+          element={
+            <Cart
+              cartItems={cartItems}
+              allItems={allItems}
+              dispatch={dispatch}
+            />
+          }
         />
       </Routes>
 

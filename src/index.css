@@ -1,13 +1,166 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("@fontsource/montserrat");
+@import url("@fontsource/montserrat/600.css");
+@import url("@fontsource/montserrat/700.css");
+
+:root {
+  --background-color: #eaeaea;
+  --white: #ffffff;
+  --title-color: #838383;
+  --shadow-color: #000000;
+  --price-color: #ffa542;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 62.5%; */
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.links {
+  display: flex;
+}
+
+.container {
+  width: 1135px;
+  max-width: 1135px;
+}
+
+.navbar {
+  align-items: center;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.cart_icon {
+  width: 23.2px;
+  height: 23.2px;
+}
+
+.ellipse_icon {
+  position: relative;
+  right: 8px;
+  bottom: 10px;
+}
+
+.badge {
+  position: relative;
+  font-size: 14px;
+  color: var(--white);
+  right: 21px;
+  bottom: 7px;
+  height: 1rem;
+  width: 0.7rem;
+}
+
+.btn-icon {
+  display: flex;
+  transition: 0.2s ease-in;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+.category-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.category-title h2 {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.headphones-container {
+  height: 886px;
+}
+
+.product {
+  font-size: 17px;
+  background-color: var(--white);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 407px;
+  align-items: center;
+  gap: 54px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-weight: 600;
+}
+
+.product-img {
+  width: 219px;
+  height: 237px;
+  margin-top: 15px;
+}
+
+.price-color {
+  color: var(--price-color);
+}
+
+.description {
+  min-width: 310px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description-container {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.ranking {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--title-color);
+}
+
+.btn-purchase {
+  font-size: 17px;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+.btn-purchase:hover {
+  color: var(--title-color);
+  transform: scale(1.1);
 }

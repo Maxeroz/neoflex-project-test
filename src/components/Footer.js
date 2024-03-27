@@ -29,9 +29,15 @@ function Footer() {
         </div>
 
         <div className="networks">
-          <img className="network-icon" src={VK} />
-          <img className="network-icon" src={Telegram} />
-          <img className="network-icon" src={Whatsapp} />
+          <a href="https://vk.com/ozerskiy_maxim" target="_blank">
+            <img className="network-icon" src={VK} />
+          </a>
+          <a href="tel:+70001234567">
+            <img className="network-icon" src={Telegram} />
+          </a>
+          <a href="tel:+70001234567">
+            <img className="network-icon" src={Whatsapp} />
+          </a>
         </div>
       </div>
     </div>

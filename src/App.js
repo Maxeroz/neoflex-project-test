@@ -21,7 +21,7 @@ function getDefaultCart() {
   return cart;
 }
 
-console.log(getDefaultCart());
+const allItems = [...data.headphones, ...data.wirelessHeadphones];
 
 const initialState = {
   amountOfGoods: 0,
@@ -36,8 +36,6 @@ function reducer(state, action) {
       const add = (prevItems, itemId) => {
         return { ...prevItems, [itemId]: prevItems[itemId] + 1 };
       };
-
-      if (state.amountOfGoods === 9) return state;
 
       return {
         ...state,
@@ -76,7 +74,10 @@ function App() {
 
       <Routes>
         <Route index element={<Catalog dispatch={dispatch} />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/cart"
+          element={<Cart cartItems={cartItems} allItems={allItems} />}
+        />
       </Routes>
 
       <Footer />

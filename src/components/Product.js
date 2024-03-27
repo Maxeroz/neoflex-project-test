@@ -1,5 +1,7 @@
 import star from "../icons/star_icon.svg";
 
+import { Link } from "react-router-dom";
+
 function Product(props) {
   const { img, rate, price, title, id } = props.data;
   const dispatch = props.dispatch;
@@ -26,7 +28,9 @@ function Product(props) {
               })
             }
           >
-            Купить
+            <Link to="/cart" className="links">
+              Купить
+            </Link>
           </button>
         </div>
       </div>

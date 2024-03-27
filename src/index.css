@@ -9,6 +9,8 @@
   --shadow-color: #000000;
   --hint-color: #ffa542;
   --border-radius: 30px;
+  --btn-round-color: #ffce7f;
+  --price-cart-color-gray: #aaaaaa;
 }
 
 * {
@@ -36,6 +38,8 @@ body {
 
 .links {
   display: flex;
+  text-decoration: none;
+  color: var(--shadow-color);
 }
 
 .container {
@@ -64,19 +68,21 @@ h1 {
 }
 
 .ellipse_icon {
+  display: flex;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--hint-color);
   position: relative;
-  right: 8px;
-  bottom: 10px;
+  right: 10px;
+  bottom: 8px;
 }
 
 .badge {
-  position: relative;
   font-size: 14px;
   color: var(--white);
-  right: 21px;
-  bottom: 7px;
   height: 1rem;
-  width: 0.7rem;
 }
 
 .btn-icon {
@@ -108,6 +114,10 @@ h1 {
 
 .headphones-container {
   height: 886px;
+}
+
+.cart-container {
+  min-height: 400px;
 }
 
 .wirelessHeadphones-container {
@@ -235,6 +245,7 @@ h1 {
   display: flex;
   width: 126px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .network-icon {
@@ -244,4 +255,109 @@ h1 {
 
 .network-icon:hover {
   transform: scale(1.1);
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 25px;
+}
+
+.goods-item-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 633px;
+  height: 218px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.goods {
+  display: flex;
+  width: 600px;
+  height: 218px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 185px;
+}
+
+.cart-image {
+  width: 146px;
+  height: 136px;
+}
+
+.btns-container-cart {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  width: 118px;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.btn-round {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-round-color);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--border-radius);
+}
+
+.amount-items-cart {
+  color: var(--shadow-color);
+}
+
+.minus-btn {
+  position: relative;
+  bottom: 11px;
+  font-weight: 700;
+}
+
+.titles-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 51px;
+  width: 300px;
+}
+
+.price-cart-gray {
+  font-size: 15px;
+  color: var(--price-cart-color-gray);
+  font-weight: 600;
+}
+
+.btns-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100px;
+  height: 185px;
+}
+
+.delete-cart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.price-cart-black {
+  font-size: 15px;
+  color: var(--shadow-color);
+  font-weight: 600;
 }

@@ -8,9 +8,11 @@ import Icon from "./Icon";
 function Header({ amountOfGoods }) {
   return (
     <div className="navbar container">
-      <h1>QPICK</h1>
+      <Link to="/" className="links">
+        <h1>QPICK</h1>
+      </Link>
       <div className="links">
-        <Link to="/">
+        <Link to="/cart">
           <Icon imageUrl={Heart_Icon} styling="cart_icon" amount="0" />
         </Link>
         <Link to="/cart">

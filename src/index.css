@@ -50,7 +50,7 @@ img {
   width: 100%;
   max-width: 1135px;
   padding: 0 24px;
-  min-width: 660px;
+  /* min-width: 660px; */
 }
 
 .navbar {
@@ -81,9 +81,9 @@ h1 {
   height: 17px;
   border-radius: 50%;
   background-color: var(--hint-color);
-  position: relative;
-  right: 10px;
-  bottom: 8px;
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
 }
 
 .badge {
@@ -93,8 +93,10 @@ h1 {
 }
 
 .btn-icon {
+  position: relative;
   display: flex;
   transition: 0.2s ease-in;
+  margin-right: 25px;
 }
 
 .btn-icon:hover {
@@ -463,4 +465,10 @@ h1 {
 
 .content {
   flex-grow: 1;
+}
+
+.links-icons {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
 }

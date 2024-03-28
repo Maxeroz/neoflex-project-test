@@ -11,11 +11,11 @@ function Header({ amountOfGoods }) {
       <Link to="/" className="links">
         <h1>QPICK</h1>
       </Link>
-      <div className="links">
-        <Link>
+      <div className="links-icons">
+        <Link className="cart_icon">
           <Icon imageUrl={Heart_Icon} styling="cart_icon" amount="0" />
         </Link>
-        <Link to="/cart">
+        <Link to="/cart" className="cart_icon">
           <Icon
             imageUrl={Cart_Icon}
             styling="cart_icon"

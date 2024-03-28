@@ -1,6 +1,11 @@
 import CartItem from "./CartItem";
+import useSound from "use-sound";
+
+import purchaseSoundDown from "../assets/btn_sound_purchase.wav";
 
 function Cart({ cartItems, allItems, dispatch, totalCost }) {
+  const [purchaseBtnSoundDown] = useSound(purchaseSoundDown, { volume: 0.1 });
+
   return (
     <div className="cart contaier">
       <div className="category-title">
@@ -27,7 +32,10 @@ function Cart({ cartItems, allItems, dispatch, totalCost }) {
             <span>ИТОГО</span>
             <span>₽ {totalCost}</span>
           </div>
-          <div className="purchase-container">
+          <div
+            className="purchase-container"
+            onMouseDown={purchaseBtnSoundDown}
+          >
             <p>Перейти к оформлению</p>
           </div>
         </div>

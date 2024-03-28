@@ -8,7 +8,6 @@ import { Route, Routes, useActionData } from "react-router-dom";
 import { useReducer } from "react";
 
 import data from "./data/data";
-import { act } from "react-dom/test-utils";
 
 function getDefaultCart() {
   let cart = {};

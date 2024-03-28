@@ -1,7 +1,18 @@
 import Delete from "../icons/delete_icon.svg";
+import vector from "../icons/vector_minus.svg";
+
+import useSound from "use-sound";
+
+import deleteSound from "../assets/btn_sound_delete.wav";
+import btnCount from "../assets/btn_sound_counter.wav";
+
+const volume = { volume: 0.25 };
 
 function CartItem(props) {
-  const { img, rate, price, title, id } = props.data;
+  const [deleteBtnSound] = useSound(deleteSound, volume);
+  const [btnCountSound] = useSound(btnCount, volume);
+
+  const { img, price, title, id } = props.data;
   const cartItems = props.cartItems;
   const dispatch = props.dispatch;
 
@@ -9,10 +20,11 @@ function CartItem(props) {
     <div className="goods-item-frame">
       <div className="goods">
         <div className="cart-image-container">
-          <img src={img} className="cart-image" />
+          <img src={img} className="cart-image" alt={title} />
           <div className="btns-container-cart">
             <div
               className="btn-round"
+              onMouseDown={cartItems[id] === 1 ? deleteBtnSound : btnCountSound}
               onClick={() =>
                 dispatch({
                   type: "removeFromCart",
@@ -20,11 +32,12 @@ function CartItem(props) {
                 })
               }
             >
-              <p className="minus-btn">_</p>
+              <img src={vector} alt="minus-btn" />
             </div>
             <div className="amount-items-cart">{cartItems[id]}</div>
             <div
               className="btn-round"
+              onMouseDown={btnCountSound}
               onClick={() =>
                 dispatch({
                   type: "addToCart",
@@ -50,6 +63,8 @@ function CartItem(props) {
                 payload: { price: +price, id: id },
               })
             }
+            alt="delete-btn"
+            onMouseDown={deleteBtnSound}
           />
           <p className="price-cart-black">{price} ₽</p>
         </div>

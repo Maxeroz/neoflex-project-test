@@ -28,11 +28,14 @@ body {
   background-color: var(--background-color);
 }
 
+img {
+  object-fit: contain;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   gap: 30px;
   min-height: 100vh;
 }
@@ -114,7 +117,7 @@ h1 {
 }
 
 .headphones-container {
-  height: 886px;
+  min-height: 886px;
 }
 
 .cart-container {
@@ -160,6 +163,20 @@ h1 {
   display: flex;
   gap: 25px;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.description-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15px;
+}
+
+.discount {
+  font-size: 13px;
+  color: var(--btn-round-color);
+  text-decoration: line-through;
 }
 
 .ranking {
@@ -337,12 +354,6 @@ h1 {
   color: var(--shadow-color);
 }
 
-.minus-btn {
-  position: relative;
-  bottom: 11px;
-  font-weight: 700;
-}
-
 .titles-image-container {
   display: flex;
   flex-direction: column;
@@ -370,6 +381,7 @@ h1 {
   width: 20px;
   height: 20px;
   transition: 0.1s ease-in;
+  cursor: pointer;
 }
 
 .delete-cart-icon:hover {
@@ -419,4 +431,12 @@ h1 {
 
 .purchase-container:hover {
   transform: scale(1.02);
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

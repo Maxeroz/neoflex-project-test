@@ -49,6 +49,7 @@ function Footer({ language, dispatch }) {
                 onClick={() =>
                   dispatch({ type: "changeLanguage", payload: lang.lang })
                 }
+                key={lang.lang}
               >
                 {lang.lang}
               </button>

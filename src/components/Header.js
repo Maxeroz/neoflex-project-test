@@ -12,7 +12,7 @@ function Header({ amountOfGoods }) {
         <h1>QPICK</h1>
       </Link>
       <div className="links">
-        <Link to="/cart">
+        <Link>
           <Icon imageUrl={Heart_Icon} styling="cart_icon" amount="0" />
         </Link>
         <Link to="/cart">

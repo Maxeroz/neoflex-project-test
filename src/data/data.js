@@ -13,6 +13,7 @@ const data = {
       title: "Apple BYZ S852I",
       price: "2927",
       rate: "4.7",
+      discount: "3527",
     },
     {
       id: 2,

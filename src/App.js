@@ -27,7 +27,7 @@ const initialState = {
   amountOfGoods: 0,
   totalCost: 0,
   cartItems: getDefaultCart(),
-  language: "Рус",
+  language: "rus",
 };
 
 function reducer(state, action) {

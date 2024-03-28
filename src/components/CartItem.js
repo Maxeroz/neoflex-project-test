@@ -18,7 +18,7 @@ function CartItem(props) {
 
   return (
     <div className="goods-item-frame">
-      <div className="goods">
+      <>
         <div className="cart-image-container">
           <img src={img} className="cart-image" alt={title} />
           <div className="btns-container-cart">
@@ -68,7 +68,7 @@ function CartItem(props) {
           />
           <p className="price-cart-black">{price} ₽</p>
         </div>
-      </div>
+      </>
     </div>
   );
 }

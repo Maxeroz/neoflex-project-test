@@ -7,13 +7,13 @@ function Cart({ cartItems, allItems, dispatch, totalCost }) {
   const [purchaseBtnSoundDown] = useSound(purchaseSoundDown, { volume: 0.1 });
 
   return (
-    <div className="cart contaier">
+    <div className="container content">
       <div className="category-title">
         <h2>Корзина</h2>
       </div>
 
-      <div className="cart-container container">
-        <div className="cartItems container">
+      <div className="cart-container">
+        <div className="cartItems ">
           {allItems.map((product) => {
             if (cartItems[product.id] !== 0) {
               return (
@@ -32,12 +32,12 @@ function Cart({ cartItems, allItems, dispatch, totalCost }) {
             <span>ИТОГО</span>
             <span>₽ {totalCost}</span>
           </div>
-          <div
+          <button
             className="purchase-container"
             onMouseDown={purchaseBtnSoundDown}
           >
-            <p>Перейти к оформлению</p>
-          </div>
+            Перейти к оформлению
+          </button>
         </div>
       </div>
     </div>

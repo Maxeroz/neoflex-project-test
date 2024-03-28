@@ -15,7 +15,7 @@ function Catalog({ dispatch }) {
       <div className="category-title">
         <h2>Беспроводные наушники</h2>
       </div>
-      <div className="products container wirelessHeadphones-container">
+      <div className="products wirelessHeadphones-container">
         {data.wirelessHeadphones.map((product) => (
           <Product key={product.id} data={product} dispatch={dispatch} />
         ))}

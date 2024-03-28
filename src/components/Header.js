@@ -7,7 +7,7 @@ import Icon from "./Icon";
 
 function Header({ amountOfGoods }) {
   return (
-    <div className="navbar container">
+    <header className="navbar container">
       <Link to="/" className="links">
         <h1>QPICK</h1>
       </Link>
@@ -23,7 +23,7 @@ function Header({ amountOfGoods }) {
           />
         </Link>
       </div>
-    </div>
+    </header>
   );
 }
 

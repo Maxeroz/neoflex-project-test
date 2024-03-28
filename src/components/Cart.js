@@ -33,7 +33,7 @@ function Cart({ cartItems, allItems, dispatch, totalCost }) {
             <span>₽ {totalCost}</span>
           </div>
           <button
-            className="purchase-container"
+            className=" btn purchase-container"
             onMouseDown={purchaseBtnSoundDown}
           >
             Перейти к оформлению

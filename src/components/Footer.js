@@ -9,7 +9,7 @@ import { langMap } from "../constants";
 
 function Footer({ language, dispatch }) {
   return (
-    <div className="container">
+    <section className="container">
       <footer className="footer">
         <div className="logo-footer">
           <h1>QPICK</h1>
@@ -58,7 +58,7 @@ function Footer({ language, dispatch }) {
           </a>
         </div>
       </footer>
-    </div>
+    </section>
   );
 }
 

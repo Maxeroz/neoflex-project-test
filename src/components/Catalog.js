@@ -3,7 +3,7 @@ import Product from "./Product";
 
 function Catalog({ dispatch }) {
   return (
-    <div className="container">
+    <section className="container">
       <div className="category-title">
         <h2>Наушники</h2>
       </div>
@@ -20,7 +20,7 @@ function Catalog({ dispatch }) {
           <Product key={product.id} data={product} dispatch={dispatch} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -22,7 +22,7 @@ function CartItem(props) {
         <div className="cart-image-container">
           <img src={img} className="cart-image" alt={title} />
           <div className="btns-container-cart">
-            <div
+            <button
               className="btn-round"
               onMouseDown={cartItems[id] === 1 ? deleteBtnSound : btnCountSound}
               onClick={() =>
@@ -33,9 +33,9 @@ function CartItem(props) {
               }
             >
               <img src={vector} alt="minus-btn" />
-            </div>
+            </button>
             <div className="amount-items-cart">{cartItems[id]}</div>
-            <div
+            <button
               className="btn-round"
               onMouseDown={btnCountSound}
               onClick={() =>
@@ -46,7 +46,7 @@ function CartItem(props) {
               }
             >
               +
-            </div>
+            </button>
           </div>
         </div>
         <div className="titles-image-container">
@@ -54,18 +54,20 @@ function CartItem(props) {
           <p className="price-cart-gray">{price} ₽</p>
         </div>
         <div className="btns-right-container">
-          <img
-            src={Delete}
-            className="delete-cart-icon"
-            onClick={() =>
-              dispatch({
-                type: "deleteItemCompletely",
-                payload: { price: +price, id: id },
-              })
-            }
-            alt="delete-btn"
-            onMouseDown={deleteBtnSound}
-          />
+          <button className="btn">
+            <img
+              src={Delete}
+              className="delete-cart-icon"
+              onClick={() =>
+                dispatch({
+                  type: "deleteItemCompletely",
+                  payload: { price: +price, id: id },
+                })
+              }
+              alt="delete-btn"
+              onMouseDown={deleteBtnSound}
+            />
+          </button>
           <p className="price-cart-black">{price} ₽</p>
         </div>
       </>

@@ -13,6 +13,7 @@
   --price-cart-color-gray: #aaaaaa;
 
   --btn-active-color: #191919;
+  --btn-actove-color-300: #4d4d4d;
 }
 
 * {
@@ -286,6 +287,7 @@ h1 {
 
 .btn-lang:hover {
   transform: scale(1.1);
+  color: var(--btn-actove-color-300);
 }
 
 .networks {
@@ -508,5 +510,9 @@ h1 {
 
   .cartItems {
     width: unset;
+  }
+
+  .footer {
+    padding: 10px;
   }
 }

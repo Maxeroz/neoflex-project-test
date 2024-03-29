@@ -9,8 +9,8 @@ import { langMap } from "../constants";
 
 function Footer({ language, dispatch }) {
   return (
-    <section className="container">
-      <footer className="footer">
+    <footer className="container">
+      <div className="footer">
         <div className="logo-footer">
           <h1>QPICK</h1>
         </div>
@@ -57,8 +57,8 @@ function Footer({ language, dispatch }) {
             <img className="network-icon" src={Whatsapp} />
           </a>
         </div>
-      </footer>
-    </section>
+      </div>
+    </footer>
   );
 }
 

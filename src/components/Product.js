@@ -13,7 +13,7 @@ function Product(props) {
   const dispatch = props.dispatch;
 
   return (
-    <div className="product">
+    <article className="product">
       <img src={img} className="product-img" alt={title} />
       <div className="description">
         <div className="description-container">
@@ -44,7 +44,7 @@ function Product(props) {
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

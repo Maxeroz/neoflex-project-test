@@ -155,8 +155,13 @@ h1 {
   height: 407px;
   align-items: center;
   gap: 54px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
   font-weight: 600;
+  transition: 0.1s ease-in;
+}
+
+.product:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .product-img {
@@ -324,9 +329,14 @@ h1 {
   align-items: center;
   max-width: 633px;
   height: 218px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
   background-color: var(--white);
   border-radius: var(--border-radius);
+  transition: 0.1s ease-in;
+}
+
+.goods-item-frame:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .goods {

@@ -234,15 +234,24 @@ h1 {
   justify-content: space-between;
   padding: 29px;
   margin-top: auto;
+  gap: 200px;
   /* width: 1135px; */
   /* flex-direction: column; */
   /* flex-wrap: wrap; */
 }
 
 .logo-footer {
-  min-width: 100px;
-  width: 85px;
-  height: 80px;
+  justify-content: space-between;
+  /* flex-grow: 1; */
+  display: flex;
+  width: 60%;
+  /* width: 85px; */
+  /* height: 80px; */
+}
+
+.services-footer {
+  width: 40%;
+  display: flex;
 }
 
 .pages {
@@ -300,6 +309,7 @@ h1 {
   width: 126px;
   justify-content: space-between;
   align-items: center;
+  gap: 18px;
 }
 
 .network-icon {
@@ -501,13 +511,19 @@ h1 {
   justify-content: space-between;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 995px) {
+  .footer {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 650px) {
   .category-title {
     justify-content: center;
   }
 
   .product {
-    max-width: unset;
+    /* max-width: unset; */
   }
 
   .shoppingCart-info {
@@ -523,6 +539,22 @@ h1 {
   }
 
   .footer {
-    padding: 10px;
+    flex-direction: column;
+  }
+
+  .logo-footer {
+    width: unset;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+  .networks {
+    gap: 5px;
+  }
+
+  .services-footer {
+    flex-direction: row;
+    width: unset;
   }
 }

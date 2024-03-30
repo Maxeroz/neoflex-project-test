@@ -4,8 +4,9 @@ import Cart from "./components/Cart";
 import Catalog from "./components/Catalog";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+
 import { Route, Routes, useActionData } from "react-router-dom";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 import data from "./data/data";
 
@@ -88,6 +89,12 @@ function reducer(state, action) {
 function App() {
   const [{ amountOfGoods, totalCost, cartItems, language }, dispatch] =
     useReducer(reducer, initialState);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+    });
+  }, []);
 
   return (
     <div className="app">

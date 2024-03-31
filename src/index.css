@@ -23,7 +23,6 @@
 }
 
 html {
-  /* font-size: 62.5%; */
   font-family: "Montserrat";
 }
 
@@ -38,7 +37,6 @@ img {
 .app {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   gap: 30px;
   min-height: 100vh;
@@ -54,7 +52,6 @@ img {
   width: 100%;
   max-width: 1135px;
   padding: 0 24px;
-  /* min-width: 660px; */
 }
 
 .navbar {
@@ -63,7 +60,6 @@ img {
   display: flex;
   justify-content: space-between;
   transition: all 300ms ease-in-out;
-  /* padding: 0 24px; */
 }
 
 h1 {
@@ -129,7 +125,6 @@ h1 {
 
 .headphones-container {
   margin-bottom: 28px;
-  /* min-height: 886px; */
 }
 
 .cart-container {
@@ -138,9 +133,6 @@ h1 {
   gap: 25px;
 
   flex-grow: 1;
-}
-
-.wirelessHeadphones-container {
 }
 
 .product {
@@ -231,23 +223,16 @@ h1 {
   background-color: var(--white);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  /* height: 149px; */
   justify-content: space-between;
   padding: 29px;
   margin-top: auto;
   gap: 200px;
-  /* width: 1135px; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
 }
 
 .logo-footer {
   justify-content: space-between;
-  /* flex-grow: 1; */
   display: flex;
   width: 60%;
-  /* width: 85px; */
-  /* height: 80px; */
 }
 
 .services-footer {
@@ -332,10 +317,6 @@ h1 {
 .goods-item-frame {
   padding: 0 24px;
   display: flex;
-
-  /* flex-direction: column;
-  flex-wrap: wrap; */
-
   justify-content: space-between;
   align-items: center;
   max-width: 633px;
@@ -352,7 +333,6 @@ h1 {
 
 .goods {
   display: flex;
-  /* min-width: 600px; */
   height: 218px;
   align-items: center;
   justify-content: space-between;
@@ -363,7 +343,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-width: 150px; */
   height: 185px;
 }
 
@@ -449,7 +428,6 @@ h1 {
 .shoppingCart-info {
   display: flex;
   flex-direction: column;
-  /* min-width: 240px; */
   width: 350px;
   height: 120px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -458,7 +436,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-left: 20px;
-  /* align-self: center; */
 }
 
 .total-price {
@@ -498,10 +475,6 @@ h1 {
   display: none;
 }
 
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
 .content {
   flex-grow: 1;
 }
@@ -523,10 +496,6 @@ h1 {
     justify-content: center;
   }
 
-  .product {
-    /* max-width: unset; */
-  }
-
   .shoppingCart-info {
     align-self: center;
   }
@@ -542,7 +511,6 @@ h1 {
   .footer {
     flex-direction: column;
     gap: 25px;
-    /* padding: 15px; */
   }
 
   .logo-footer {
@@ -552,8 +520,6 @@ h1 {
 
   .list {
     flex-direction: row;
-    /* font-size: 15px;
-    gap: 3px; */
   }
   .networks {
     gap: 5px;

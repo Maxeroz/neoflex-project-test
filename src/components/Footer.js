@@ -52,10 +52,10 @@ function Footer({ language, dispatch }) {
             <a href="https://vk.com/ozerskiy_maxim" target="_blank">
               <img className="network-icon" src={VK} />
             </a>
-            <a href="/">
+            <a href="https://t.me/+1XXXXXXX ">
               <img className="network-icon" src={Telegram} />
             </a>
-            <a href="tel:+70001234567">
+            <a href="https://api.whatsapp.com/send/?phone=79200000000">
               <img className="network-icon" src={Whatsapp} />
             </a>
           </div>
